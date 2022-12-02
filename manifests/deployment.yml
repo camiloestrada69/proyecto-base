@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: camiloestradaproyectobase 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camiloestradaproyectobase
+  template:
+    metadata:
+      labels:
+        app: camiloestradaproyectobase 
+    spec:
+      containers:
+        - name: camiloestradaproyectobase 
+          image: crcalidad.azurecr.io/camiloestradaproyectobase
+          ports:
+          - containerPort: 80
